@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./styles/_mixins.scss";
+// @import "./styles/font.scss";
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@font-face {
+  font-family: "Chronicle display-bold";
+  src: local("Chronicle display"),
+    url(../../public/fonts/chronicle/Chronicle-Display-Black.otf)
+      format("truetype");
+}
+@font-face {
+  font-family: "Chronicle display-regular";
+  src: local("Chronicle display"),
+    url(../../public/fonts/chronicle/Chronicle-Display-Roman.otf)
+      format("truetype");
+}
+@font-face {
+  font-family: "Chronicle display-semibold";
+  src: local("Chronicle display"),
+    url(../../public/fonts/chronicle/Chronicle-Display-Semibold.otf)
+      format("truetype");
+}
+@font-face {
+  font-family: "Chronicle display-light";
+  src: local("Chronicle display"),
+    url(../../public/fonts/chronicle/Chronicle-Display-Light-Italic.otf)
+      format("truetype");
+}
+
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: local("Gilroy-Bold"),
+    url(../../public/fonts/gilroy/Gilroy-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: local("Gilroy-Medium"),
+    url(../../public/fonts/gilroy/Gilroy-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Gilroy-Regular";
+  src: local("Gilroy-Regular"),
+    url(../../public/fonts/gilroy/Gilroy-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Gilroy-Light";
+  src: local("Gilroy-Light"),
+    url(../../public/fonts/gilroy/Gilroy-Light.ttf) format("truetype");
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: toRem(32);
+  font-family: "Chronicle display-bold";
+}
+
+.home-main {
+  position: relative;
+  width: 100%;
+  background-color: #0b1d26;
+  z-index: 0;
+  width: 100%;
+  padding-inline: toRem(229);
+  padding-bottom: toRem(120);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: toRem(-426);
+    left: 0;
+    height: toRem(700);
+    width: 100%;
+    background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0b1d26 61.38%);
+    z-index: -1;
+  }
+}
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: toRem(200);
+  position: relative;
+  top: toRem(-192);
+}
+
+.socials {
+  position: fixed;
+  top: toRem(359);
+  left: toRem(82);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: toRem(24);
+
+  span {
+    transform: rotate(90deg);
+    color: #fff;
+    font-family: "Gilroy-bold";
+    font-size: toRem(18);
+    font-weight: 700;
+    margin-bottom: toRem(24);
+  }
+}
+
+.page-slider {
+  position: fixed;
+  top: toRem(326);
+  right: toRem(80);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  column-gap: toRem(32);
+}
+
+.slider {
+  height: toRem(300);
+  width: toRem(3);
+  background-color: #ffffff33;
+  overflow-y: hidden;
+}
+
+.slide-bar {
+  width: 100%;
+  height: toRem(60);
+  background-color: #fff;
+}
+
+.slide-position {
+  display: flex;
+  flex-direction: column;
+  row-gap: toRem(40);
+
+  span {
+    color: #fff;
+    text-align: right;
+    font-family: "Gilroy-bold";
+    font-size: toRem(18);
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}

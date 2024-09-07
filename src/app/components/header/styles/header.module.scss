@@ -1,0 +1,103 @@
+@import "../../../styles/mixins.scss";
+
+.header {
+  position: relative;
+  height: toRem(1706);
+  z-index: 0;
+  // overflow: hidden;
+}
+
+.skyImageContainer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.skyImageGradient {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    330deg,
+    rgba(11, 29, 38, 0) 31.06%,
+    #0b1d26 108.93%
+  );
+  z-index: 1;
+}
+
+.heroImg {
+  // height: 100%;
+  object-fit: cover;
+  //   mask-image:
+}
+
+.mountainImageContainer {
+  // height: 100%;
+  position: absolute;
+  top: toRem(480);
+  z-index: 7;
+}
+
+.clifImageContainer {
+  // height: 100%;
+  position: absolute;
+  top: toRem(780);
+  z-index: 8;
+}
+
+.headTextContainer {
+  height: 100%;
+  position: relative;
+  z-index: 8;
+  width: 50%;
+  margin-left: toRem(314);
+  margin-top: toRem(130);
+  display: flex;
+  flex-direction: column;
+  row-gap: toRem(32);
+}
+
+.headTextContainer h1 {
+  color: var(--Wei, #fff);
+  font-family: "Chronicle Display-semibold";
+  font-size: toRem(88);
+  font-weight: 600;
+  line-height: toRem(100);
+  text-transform: capitalize;
+}
+
+.headText {
+  display: flex;
+  column-gap: toRem(32);
+  align-items: center;
+}
+
+.headText span {
+  display: block;
+  width: toRem(72);
+  height: toRem(3);
+  background: #fbd784;
+}
+
+.headText p {
+  font-family: "Gilroy-bold";
+  color: #fbd784;
+  font-size: toRem(18);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: toRem(6);
+}
+
+.scrollDown {
+  display: flex;
+  column-gap: toRem(16);
+  align-items: center;
+  cursor: default;
+}
+
+.scrollDown p {
+  font-family: "Gilroy-Bold";
+  color: #fff;
+  font-size: toRem(18);
+}

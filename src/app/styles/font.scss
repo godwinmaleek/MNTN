@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Chronicle display-bold";
+  src: local("Chronicle display"),
+    url(../../../public/fonts/chronicle/Chronicle\ Display\ Black.otf)
+      format("truetype");
+}
+@font-face {
+  font-family: "Chronicle display-regular";
+  src: local("Chronicle display"),
+    url(../../../public/fonts/chronicle/Chronicle\ Display\ Roman.otf)
+      format("truetype");
+}
+@font-face {
+  font-family: "Chronicle display-semibold";
+  src: local("Chronicle display"),
+    url(../../../public/fonts/chronicle/Chronicle\ Display\ Semibold.otf)
+      format("truetype");
+}
+
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: local("Gilroy-Bold"),
+    url(../../../public/fonts/gilroy/Gilroy-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: local("Gilroy-Medium"),
+    url(../../../public/fonts/gilroy/Gilroy-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Gilroy-Regular";
+  src: local("Gilroy-Regular"),
+    url(../../../public/fonts/gilroy/Gilroy-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Gilroy-Light";
+  src: local("Gilroy-Light"),
+    url(../../../public/fonts/gilroy/Gilroy-Light.ttf) format("truetype");
+}

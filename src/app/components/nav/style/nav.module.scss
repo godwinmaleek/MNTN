@@ -1,0 +1,57 @@
+@import "../../../styles/mixins.scss";
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-inline: toRem(80);
+  padding-top: toRem(64);
+  color: #fff;
+  z-index: 99;
+
+  nav {
+    display: flex;
+    align-items: center;
+    column-gap: toRem(40);
+    font-family: "Gilroy-Bold";
+
+    a {
+      position: relative;
+      font-size: toRem(18);
+      font-weight: 700;
+      transition: all 0.3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &::before {
+        display: block;
+        position: absolute;
+        content: " ";
+        inset: 0;
+        top: 20px;
+        height: toRem(3);
+        width: 100%;
+        transform: scaleX(0);
+        background-color: #fff;
+        transition: all 0.3s;
+      }
+
+      &:hover::before {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+// .container nav
+.account {
+  font-family: "Gilroy-Bold";
+  display: flex;
+  align-items: center;
+  column-gap: toRem(8);
+  font-size: toRem(17);
+}
